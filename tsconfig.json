@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "lib": ["dom", "dom.iterable", "es2016"],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "outDir": "dist"
+  },
+  "include": ["src"]
+}
