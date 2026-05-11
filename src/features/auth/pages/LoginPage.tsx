@@ -10,7 +10,7 @@ export function LoginPage() {
   };
 
   return (
-    <AuthPageFrame title="Log in" description="Enter your credentials to continue.">
+    <AuthPageFrame title="Welcome back" description="Log in to continue managing payments.">
       <AuthForm
         submitLabel="Log in"
         onSubmit={handleSubmit}

@@ -49,6 +49,10 @@ const Input = styled.input`
   color: ${({ theme }) => theme.colors.text.primary};
   background: ${({ theme }) => theme.colors.background.surface};
   outline: none;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    background 200ms ease;
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.text.muted};
@@ -56,5 +60,7 @@ const Input = styled.input`
 
   &:focus {
     border-color: ${({ theme }) => theme.colors.border.focus};
+    box-shadow: ${({ theme }) => theme.colors.shadow.focus};
+    background: ${({ theme }) => theme.colors.background.surface};
   }
 `;

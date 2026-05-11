@@ -20,25 +20,25 @@ export function AuthPageFrame({ title, description, children }: AuthPageFramePro
 
 const Frame = styled.div`
   display: grid;
-  gap: ${({ theme }) => theme.spacing.lg};
+  gap: ${({ theme }) => theme.spacing.xl};
 `;
 
 const Header = styled.div`
   display: grid;
-  gap: ${({ theme }) => theme.spacing.xs};
+  gap: ${({ theme }) => theme.spacing.sm};
 `;
 
 const Title = styled.h1`
   margin: 0;
   color: ${({ theme }) => theme.colors.text.primary};
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.15;
 `;
 
 const Description = styled.p`
   margin: 0;
   color: ${({ theme }) => theme.colors.text.secondary};
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
 `;

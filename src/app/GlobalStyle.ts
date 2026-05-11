@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     min-height: 100%;
     margin: 0;
+    overflow-x: hidden;
   }
 
   #root {

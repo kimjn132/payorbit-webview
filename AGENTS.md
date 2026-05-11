@@ -6,7 +6,10 @@ Before doing any work, read and follow:
 
 For feature-specific tasks, also read the relevant file under:
 
-- ./harness/features/
+- Relevant files under `./harness`
+- Existing source code patterns
+
+Do not implement features before understanding the project rules in `master.md`.
 
 Rules:
 
@@ -15,3 +18,4 @@ Rules:
 - Follow the current project conventions.
 - Keep changes small and incremental.
 - After implementation, run typecheck/build if available.
+- Summarize changed files

@@ -1,23 +1,29 @@
 export const theme = {
   colors: {
     background: {
-      page: '#f6f8fb',
+      page: '#f7f9fc',
       surface: '#ffffff',
-      subtle: '#eef2f7',
+      subtle: '#eef4ff',
     },
     border: {
-      default: '#d9e2ec',
-      focus: '#2563eb',
+      default: '#e1e8f2',
+      focus: '#3182f6',
     },
     text: {
-      primary: '#172033',
-      secondary: '#5f6f86',
-      muted: '#8a97aa',
+      primary: '#111827',
+      secondary: '#53627a',
+      muted: '#8a96a8',
+      inverse: '#ffffff',
     },
     action: {
-      primary: '#2563eb',
-      primaryHover: '#1d4ed8',
-      disabled: '#a9b8cc',
+      primary: '#3182f6',
+      primaryHover: '#1b64da',
+      subtle: '#eef4ff',
+      disabled: '#b9c7d8',
+    },
+    shadow: {
+      panel: '0 18px 50px rgba(17, 24, 39, 0.08)',
+      focus: '0 0 0 4px rgba(49, 130, 246, 0.12)',
     },
   },
   spacing: {
@@ -29,8 +35,8 @@ export const theme = {
     xxl: '48px',
   },
   radii: {
-    sm: '6px',
-    md: '8px',
+    sm: '12px',
+    md: '16px',
   },
   typography: {
     fontFamily:
