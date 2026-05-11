@@ -10,6 +10,7 @@
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,
+    "types": ["vite/client"],
     "outDir": "dist"
   },
   "include": ["src"]

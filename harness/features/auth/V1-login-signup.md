@@ -127,7 +127,7 @@ master.md의 규칙을 최우선으로 따른다.
 - /auth/login
 - /auth/signup
 
-기존 TanStack Router file-based routing 규칙 유지.
+기존 TanStack Router code-based routing 규칙 유지.
 
 ---
 
