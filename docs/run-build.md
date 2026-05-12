@@ -134,3 +134,17 @@ const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
   }
 }
 ```
+
+## 추가 조건
+* 현재 프로젝트가 Vite인지 CRA인지 먼저 확인해라.
+* Vite면 Vite 기준으로 작성해라.
+* CRA면 CRA 기준으로 작성해라.
+* package manager가 npm/yarn/pnpm/bun 중 무엇인지 lock 파일로 판단해라.
+    * package-lock.json → npm
+    * yarn.lock → yarn
+    * pnpm-lock.yaml → pnpm
+    * bun.lockb → bun
+* 실제 프로젝트 구조와 package.json을 기준으로 문서를 작성해라.
+* 추측으로 명령어를 쓰지 말고, 반드시 파일을 확인한 뒤 작성해라.
+* Flutter WebView 환경까지 고려해서 작성해라.
+* 초보 개발자도 바로 실행할 수 있도록 단계별로 작성해라.
