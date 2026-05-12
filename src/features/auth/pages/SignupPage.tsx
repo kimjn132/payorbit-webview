@@ -13,7 +13,7 @@ import type { FieldErrors, SignupFormValues } from '../validation/authValidation
 
 const INITIAL_VALUES: SignupFormValues = {
   name: '',
-  email: '',
+  phoneNumber: '',
   password: '',
   passwordConfirm: '',
 };
@@ -57,7 +57,7 @@ export function SignupPage() {
     signupMutation.mutate(
       {
         name: values.name.trim(),
-        email: values.email.trim(),
+        phoneNumber: values.phoneNumber.trim(),
         password: values.password,
       },
       {
@@ -96,14 +96,14 @@ export function SignupPage() {
           disabled={signupMutation.isPending}
         />
         <AuthTextField
-          label="Email"
-          name="email"
-          type="email"
-          autoComplete="email"
-          placeholder="you@example.com"
-          value={values.email}
-          onChange={(value) => updateField('email', value)}
-          error={fieldErrors.email}
+          label="Phone number"
+          name="phoneNumber"
+          type="tel"
+          autoComplete="tel"
+          placeholder="010-0000-0000"
+          value={values.phoneNumber}
+          onChange={(value) => updateField('phoneNumber', value)}
+          error={fieldErrors.phoneNumber}
           disabled={signupMutation.isPending}
         />
         <AuthTextField

@@ -2,13 +2,13 @@ import { apiRequest } from '../../../shared/api/apiClient';
 import type { AuthUser } from '../stores/authStore';
 
 export type LoginRequest = {
-  email: string;
+  phoneNumber: string;
   password: string;
 };
 
 export type SignupRequest = {
   name: string;
-  email: string;
+  phoneNumber: string;
   password: string;
 };
 

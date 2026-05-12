@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 type AuthTextFieldProps = {
   label: string;
   name: string;
-  type: 'email' | 'password' | 'text';
+  type: 'email' | 'password' | 'text' | 'tel';
   autoComplete: string;
   placeholder: string;
   value: string;

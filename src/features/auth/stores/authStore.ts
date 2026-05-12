@@ -3,7 +3,7 @@ import { create } from 'zustand';
 export type AuthUser = {
   id: string;
   name: string;
-  email: string;
+  phoneNumber: string;
 };
 
 type AuthTokens = {
@@ -39,13 +39,17 @@ function readPersisted(): PersistedAuth | null {
       typeof parsed.refreshToken === 'string' &&
       parsed.user &&
       typeof parsed.user.id === 'string' &&
-      typeof parsed.user.email === 'string' &&
+      typeof parsed.user.phoneNumber === 'string' &&
       typeof parsed.user.name === 'string'
     ) {
       return {
         accessToken: parsed.accessToken,
         refreshToken: parsed.refreshToken,
-        user: { id: parsed.user.id, email: parsed.user.email, name: parsed.user.name },
+        user: {
+          id: parsed.user.id,
+          phoneNumber: parsed.user.phoneNumber,
+          name: parsed.user.name,
+        },
       };
     }
     return null;

@@ -1,16 +1,16 @@
 export const MIN_PASSWORD_LENGTH = 8;
 export const MIN_NAME_LENGTH = 2;
 
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const PHONE_PATTERN = /^010-\d{4}-\d{4}$/;
 
 export type LoginFormValues = {
-  email: string;
+  phoneNumber: string;
   password: string;
 };
 
 export type SignupFormValues = {
   name: string;
-  email: string;
+  phoneNumber: string;
   password: string;
   passwordConfirm: string;
 };
@@ -20,10 +20,10 @@ export type FieldErrors<TValues> = Partial<Record<keyof TValues, string>>;
 export function validateLogin(values: LoginFormValues): FieldErrors<LoginFormValues> {
   const errors: FieldErrors<LoginFormValues> = {};
 
-  if (values.email.trim().length === 0) {
-    errors.email = 'Email is required.';
-  } else if (!EMAIL_PATTERN.test(values.email.trim())) {
-    errors.email = 'Enter a valid email address.';
+  if (values.phoneNumber.trim().length === 0) {
+    errors.phoneNumber = 'Phone number is required.';
+  } else if (!PHONE_PATTERN.test(values.phoneNumber.trim())) {
+    errors.phoneNumber = 'Enter a valid phone number (010-0000-0000).';
   }
 
   if (values.password.length === 0) {
@@ -40,10 +40,10 @@ export function validateSignup(values: SignupFormValues): FieldErrors<SignupForm
     errors.name = `Name must be at least ${MIN_NAME_LENGTH} characters.`;
   }
 
-  if (values.email.trim().length === 0) {
-    errors.email = 'Email is required.';
-  } else if (!EMAIL_PATTERN.test(values.email.trim())) {
-    errors.email = 'Enter a valid email address.';
+  if (values.phoneNumber.trim().length === 0) {
+    errors.phoneNumber = 'Phone number is required.';
+  } else if (!PHONE_PATTERN.test(values.phoneNumber.trim())) {
+    errors.phoneNumber = 'Enter a valid phone number (010-0000-0000).';
   }
 
   if (values.password.length < MIN_PASSWORD_LENGTH) {

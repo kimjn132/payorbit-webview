@@ -11,7 +11,7 @@ import { hasErrors, validateLogin } from '../validation/authValidation';
 import type { FieldErrors, LoginFormValues } from '../validation/authValidation';
 
 const INITIAL_VALUES: LoginFormValues = {
-  email: '',
+  phoneNumber: '',
   password: '',
 };
 
@@ -48,7 +48,7 @@ export function LoginPage() {
     setSubmitError(null);
 
     loginMutation.mutate(
-      { email: values.email.trim(), password: values.password },
+      { phoneNumber: values.phoneNumber.trim(), password: values.password },
       {
         onSuccess: () => {
           navigate({ to: '/', replace: true });
@@ -73,14 +73,14 @@ export function LoginPage() {
         footerLinkTo="/auth/signup"
       >
         <AuthTextField
-          label="Email"
-          name="email"
-          type="email"
-          autoComplete="email"
-          placeholder="you@example.com"
-          value={values.email}
-          onChange={(value) => updateField('email', value)}
-          error={fieldErrors.email}
+          label="Phone number"
+          name="phoneNumber"
+          type="tel"
+          autoComplete="tel"
+          placeholder="010-0000-0000"
+          value={values.phoneNumber}
+          onChange={(value) => updateField('phoneNumber', value)}
+          error={fieldErrors.phoneNumber}
           disabled={loginMutation.isPending}
         />
         <AuthTextField
